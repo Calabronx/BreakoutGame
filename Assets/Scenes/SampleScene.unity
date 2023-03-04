@@ -2836,8 +2836,8 @@ GameObject:
   - component: {fileID: 644259699}
   - component: {fileID: 644259698}
   - component: {fileID: 644259700}
-  - component: {fileID: 644259701}
   - component: {fileID: 644259702}
+  - component: {fileID: 644259703}
   m_Layer: 0
   m_Name: PaddleSprite
   m_TagString: Player
@@ -2934,19 +2934,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &644259701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644259697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787fa4f367757ee40afd075652b4c55d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paddleInstance: {fileID: 2127667444}
 --- !u!60 &644259702
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2994,6 +2981,21 @@ PolygonCollider2D:
       - {x: 0.40234375, y: 0.79296875}
       - {x: 0.29296875, y: 0.90234375}
       - {x: 0.15234375, y: 0.97265625}
+--- !u!114 &644259703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644259697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787fa4f367757ee40afd075652b4c55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddleInstance: {fileID: 2127667444}
+  paddleSprite: {fileID: 644259697}
+  rigidbody2D: {fileID: 0}
 --- !u!1 &648310260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,7 +7486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea6012cdf3dedf4b89f09fe10e21ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 12
+  lifes: 3
+  ballSpeed: 20
   currentVelocity: {x: 0, y: 0}
   moveDirection: {x: 0, y: 0}
 --- !u!1 &1681871214
@@ -7823,7 +7826,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 3
 --- !u!58 &1781192509
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7854,6 +7856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballInstance: {fileID: 1659359556}
   ballSprite: {fileID: 1781192504}
+  isDead: 0
   rigidbody2D: {fileID: 1781192505}
 --- !u!1 &1810561637
 GameObject:
@@ -8586,7 +8589,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ad8af23aac08d4cb89c6c13d5e3f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifes: 5
   movementSpeed: 50
+  currentVelocity: {x: 0, y: 0}
+  moveDirection: {x: 0, y: 0}
 --- !u!1 &2132419915
 GameObject:
   m_ObjectHideFlags: 0

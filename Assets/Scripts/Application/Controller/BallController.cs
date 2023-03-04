@@ -6,9 +6,11 @@ public class BallController : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Ball ballInstance;
+    [SerializeField] Ball ballInstance;
 
-    public GameObject ballSprite;
+    [SerializeField] GameObject ballSprite;
+
+    public bool isDead = false;
 
     [SerializeField] new Rigidbody2D rigidbody2D;
 
@@ -26,12 +28,22 @@ public class BallController : MonoBehaviour
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    private void Update()
+    {
+        // if(Input.GetKeyDown(KeyCode.KeypadEnter)) {
+        //     Instantiate(ballInstance,ballInstance.transform.position);
+        // }
+    }
     void FixedUpdate()
     {
         ballInstance.currentVelocity = rigidbody2D.velocity;
-        //if(currentVelocity > 5) {
-        //rigidbody2D.velocity =
-        //}
+        if (ballInstance.ballSpeed < Ball.MIN_SPEED)
+        {
+            ballInstance.ballSpeed = Ball.MIN_SPEED;
+        }
     }
 
     /// <summary>
@@ -49,14 +61,16 @@ public class BallController : MonoBehaviour
         if (collisionName.Equals("LowerLimit"))
         {
             die(ballSprite);
+            ballInstance.lifes--;
+            isDead = true;
+            Debug.Log("YOU LOSE THE GAME");
+            
         }
     }
 
     private void die(GameObject gameSprite)
     {
-        Debug.Log("die");
         Destroy(gameSprite);
     }
-
 
 }
