@@ -13,7 +13,7 @@ public class BrickController : MonoBehaviour
         string collisionName = collision.transform.name;
         
         Debug.Log(collisionName);
-        if (collisionName.Equals("BallSprite"))
+        if (collisionName.Contains("BallSprite"))
         {
             brick.health--;
             if(brick.health <= 0) {

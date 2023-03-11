@@ -12,7 +12,7 @@ public class BrickGeneratorController : MonoBehaviour
     private float yOffset = 2f;
     private int rotation = 90;
     private int brickCounter = 0;
-    [SerializeField] Color[] colors;
+    private Color[] colors = {Color.red, Color.red,Color.yellow,Color.yellow,Color.green,Color.green,Color.blue,Color.blue,Color.magenta,Color.magenta,Color.black,Color.black};
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class BrickGeneratorController : MonoBehaviour
                 float xPosition = col * xOffset - ((columns - 1) * xOffset / 2);
                 float yPosition = row * yOffset + 2.5f;
                 BrickView brickView = Instantiate(brickViewPrefab, new Vector3(xPosition, yPosition, 0f), Quaternion.Euler(0, 0, rotation));
-                brickView.SetColor(Color.red);
+                brickView.SetColor(colors[row]);
                 brickCounter++; // set the color of the brick view
             }
         }

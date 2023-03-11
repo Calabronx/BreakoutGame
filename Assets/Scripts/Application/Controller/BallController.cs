@@ -8,10 +8,11 @@ public class BallController : MonoBehaviour
 
     [SerializeField] Ball ballInstance;
 
-    [SerializeField] GameObject ballSprite;
+    [SerializeField] BallView ballView;
 
     public bool isDead = false;
 
+    private int lifeGame = 0;
     [SerializeField] new Rigidbody2D rigidbody2D;
 
     /// <summary>
@@ -19,6 +20,7 @@ public class BallController : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        lifeGame = ballInstance.lifes;
     }
     void Start()
     {
@@ -60,17 +62,41 @@ public class BallController : MonoBehaviour
         rigidbody2D.velocity = ballInstance.moveDirection;
         if (collisionName.Equals("LowerLimit"))
         {
-            die(ballSprite);
-            ballInstance.lifes--;
-            isDead = true;
-            Debug.Log("YOU LOSE THE GAME");
-            
+            //die(ballView.ballSprite);
+            //isDead = true;
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null) {
+                Debug.Log("die");
+                gameManager.OnBallDeath();
+            } else {
+                Debug.LogWarning("GameManager not found.");
+            }
         }
     }
 
     private void die(GameObject gameSprite)
     {
-        Destroy(gameSprite);
+        if (lifeGame <= 0)
+        {
+            Debug.Log("GAME OVER");
+            Debug.Log("YOU LOSE THE GAME");
+            Destroy(gameSprite);
+        }
+        else
+        {
+            Destroy(gameSprite);
+            Debug.Log("-1 LIFE");
+            lifeGame--;
+            Debug.Log("Lifes: " + lifeGame);
+            GameObject newBall = Instantiate(ballView.ballSprite, new Vector2(0.05f, -2.2f), Quaternion.identity);
+            newBall.name = "BallSprite";
+            BallController ballController = newBall.GetComponent<BallController>();
+            ballController.enabled = true;
+            CircleCollider2D circleCollider2D = newBall.GetComponent<CircleCollider2D>();
+            circleCollider2D.enabled = true;
+            Rigidbody2D rigidbody2D = newBall.GetComponent<Rigidbody2D>();
+            rigidbody2D.velocity = Vector2.down * ballInstance.ballSpeed;
+        }
     }
 
 }
