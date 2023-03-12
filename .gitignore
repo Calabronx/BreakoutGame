@@ -70,3 +70,233 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Scenes/BrekaoutGame.unity
+ProjectSettings/BurstAotSettings_StandaloneWindows.json
+ProjectSettings/CommonBurstAotSettings.json
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/TagManager.asset
+BuildGame/Breakout.exe
+BuildGame/UnityCrashHandler64.exe
+BuildGame/UnityPlayer.dll
+BuildGame/Breakout_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64/lib_burst_generated.txt
+BuildGame/Breakout_Data/app.info
+BuildGame/Breakout_Data/boot.config
+BuildGame/Breakout_Data/globalgamemanagers
+BuildGame/Breakout_Data/globalgamemanagers.assets
+BuildGame/Breakout_Data/level0
+BuildGame/Breakout_Data/RuntimeInitializeOnLoads.json
+BuildGame/Breakout_Data/ScriptingAssemblies.json
+BuildGame/Breakout_Data/sharedassets0.assets
+BuildGame/Breakout_Data/sharedassets0.assets.resS
+BuildGame/Breakout_Data/Managed/Assembly-CSharp.dll
+BuildGame/Breakout_Data/Managed/Mono.Security.dll
+BuildGame/Breakout_Data/Managed/mscorlib.dll
+BuildGame/Breakout_Data/Managed/netstandard.dll
+BuildGame/Breakout_Data/Managed/System.ComponentModel.Composition.dll
+BuildGame/Breakout_Data/Managed/System.Configuration.dll
+BuildGame/Breakout_Data/Managed/System.Core.dll
+BuildGame/Breakout_Data/Managed/System.Data.DataSetExtensions.dll
+BuildGame/Breakout_Data/Managed/System.Data.dll
+BuildGame/Breakout_Data/Managed/System.dll
+BuildGame/Breakout_Data/Managed/System.Drawing.dll
+BuildGame/Breakout_Data/Managed/System.EnterpriseServices.dll
+BuildGame/Breakout_Data/Managed/System.IO.Compression.dll
+BuildGame/Breakout_Data/Managed/System.IO.Compression.FileSystem.dll
+BuildGame/Breakout_Data/Managed/System.Net.Http.dll
+BuildGame/Breakout_Data/Managed/System.Numerics.dll
+BuildGame/Breakout_Data/Managed/System.Runtime.dll
+BuildGame/Breakout_Data/Managed/System.Runtime.Serialization.dll
+BuildGame/Breakout_Data/Managed/System.Security.dll
+BuildGame/Breakout_Data/Managed/System.ServiceModel.Internals.dll
+BuildGame/Breakout_Data/Managed/System.Transactions.dll
+BuildGame/Breakout_Data/Managed/System.Xml.dll
+BuildGame/Breakout_Data/Managed/System.Xml.Linq.dll
+BuildGame/Breakout_Data/Managed/Unity.2D.Animation.Runtime.dll
+BuildGame/Breakout_Data/Managed/Unity.2D.Common.Runtime.dll
+BuildGame/Breakout_Data/Managed/Unity.2D.IK.Runtime.dll
+BuildGame/Breakout_Data/Managed/Unity.2D.PixelPerfect.dll
+BuildGame/Breakout_Data/Managed/Unity.2D.SpriteShape.Runtime.dll
+BuildGame/Breakout_Data/Managed/Unity.2D.Tilemap.Extras.dll
+BuildGame/Breakout_Data/Managed/Unity.Burst.Cecil.dll
+BuildGame/Breakout_Data/Managed/Unity.Burst.Cecil.Mdb.dll
+BuildGame/Breakout_Data/Managed/Unity.Burst.Cecil.Pdb.dll
+BuildGame/Breakout_Data/Managed/Unity.Burst.Cecil.Rocks.dll
+BuildGame/Breakout_Data/Managed/Unity.Burst.dll
+BuildGame/Breakout_Data/Managed/Unity.Burst.Unsafe.dll
+BuildGame/Breakout_Data/Managed/Unity.InternalAPIEngineBridge.001.dll
+BuildGame/Breakout_Data/Managed/Unity.Mathematics.dll
+BuildGame/Breakout_Data/Managed/Unity.TextMeshPro.dll
+BuildGame/Breakout_Data/Managed/Unity.Timeline.dll
+BuildGame/Breakout_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll
+BuildGame/Breakout_Data/Managed/Unity.VisualScripting.Core.dll
+BuildGame/Breakout_Data/Managed/Unity.VisualScripting.Flow.dll
+BuildGame/Breakout_Data/Managed/Unity.VisualScripting.State.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.AccessibilityModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.AIModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.AndroidJNIModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.AnimationModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ARModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.AssetBundleModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.AudioModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ClothModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ClusterInputModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ClusterRendererModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.CoreModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.CrashReportingModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.DirectorModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.DSPGraphModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.GameCenterModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.GIModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.GridModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.HotReloadModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ImageConversionModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.IMGUIModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.InputLegacyModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.InputModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.JSONSerializeModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.LocalizationModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.NVIDIAModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ParticleSystemModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.PerformanceReportingModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.Physics2DModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.PhysicsModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ProfilerModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.ScreenCaptureModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.SharedInternalsModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.SpriteMaskModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.SpriteShapeModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.StreamingModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.SubstanceModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.SubsystemsModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TerrainModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TerrainPhysicsModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TextRenderingModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TilemapModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.TLSModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UI.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UIElementsModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UIElementsNativeModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UIModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UmbraModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UNETModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityAnalyticsModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityConnectModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityCurlModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityTestProtocolModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityWebRequestModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.VehiclesModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.VFXModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.VideoModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.VirtualTexturingModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.VRModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.WindModule.dll
+BuildGame/Breakout_Data/Managed/UnityEngine.XRModule.dll
+BuildGame/Breakout_Data/Plugins/x86_64/lib_burst_generated.dll
+BuildGame/Breakout_Data/Resources/unity default resources
+BuildGame/Breakout_Data/Resources/unity_builtin_extra
+BuildGame/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll
+BuildGame/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll
+BuildGame/MonoBleedingEdge/etc/mono/browscap.ini
+BuildGame/MonoBleedingEdge/etc/mono/config
+BuildGame/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+BuildGame/MonoBleedingEdge/etc/mono/2.0/machine.config
+BuildGame/MonoBleedingEdge/etc/mono/2.0/settings.map
+BuildGame/MonoBleedingEdge/etc/mono/2.0/web.config
+BuildGame/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser
+BuildGame/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx
+BuildGame/MonoBleedingEdge/etc/mono/4.0/machine.config
+BuildGame/MonoBleedingEdge/etc/mono/4.0/settings.map
+BuildGame/MonoBleedingEdge/etc/mono/4.0/web.config
+BuildGame/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser
+BuildGame/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx
+BuildGame/MonoBleedingEdge/etc/mono/4.5/machine.config
+BuildGame/MonoBleedingEdge/etc/mono/4.5/settings.map
+BuildGame/MonoBleedingEdge/etc/mono/4.5/web.config
+BuildGame/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser
+BuildGame/MonoBleedingEdge/etc/mono/mconfig/config.xml
+Assets/TextMesh Pro/Documentation.meta
+Assets/TextMesh Pro/Fonts.meta
+Assets/TextMesh Pro/Resources.meta
+Assets/TextMesh Pro/Shaders.meta
+Assets/TextMesh Pro/Sprites.meta
+Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta
+Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials.meta
+Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
+Assets/TextMesh Pro/Resources/Sprite Assets.meta
+Assets/TextMesh Pro/Resources/Style Sheets.meta
+Assets/TextMesh Pro/Resources/TMP Settings.asset
+Assets/TextMesh Pro/Resources/TMP Settings.asset.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta
+Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta
+Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta
+Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta
+Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta
+Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta
+Assets/TextMesh Pro/Shaders/TMPro.cginc
+Assets/TextMesh Pro/Shaders/TMPro.cginc.meta
+Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt
+Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta
+Assets/TextMesh Pro/Sprites/EmojiOne.json
+Assets/TextMesh Pro/Sprites/EmojiOne.json.meta
+Assets/TextMesh Pro/Sprites/EmojiOne.png
+Assets/TextMesh Pro/Sprites/EmojiOne.png.meta
+Assets/TextMesh Pro.meta
+.gitignore
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/TagManager.asset
+.gitignore
