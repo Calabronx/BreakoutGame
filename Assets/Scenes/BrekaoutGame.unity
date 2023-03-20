@@ -1480,7 +1480,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 2
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brickSprite: {fileID: 2032881659}
-  health: 2
+  health: 1
   isDead: 0
 --- !u!114 &2032881665
 MonoBehaviour:

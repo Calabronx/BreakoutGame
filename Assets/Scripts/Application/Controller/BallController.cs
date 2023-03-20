@@ -24,11 +24,13 @@ public class BallController : MonoBehaviour
     void FixedUpdate()
     {
         ballInstance.currentVelocity = rigidbody2D.velocity;
-        if (ballInstance.ballSpeed < Ball.MIN_SPEED)
-        {
-            //ballInstance.ballSpeed = Ball.MIN_SPEED;
-            rigidbody2D.velocity = ballInstance.moveDirection * ballInstance.ballSpeed;
-        }
+        // if (ballInstance.ballSpeed < Ball.MIN_SPEED)
+        // {
+        //     //ballInstance.ballSpeed = Ball.MIN_SPEED;
+        //     rigidbody2D.velocity = ballInstance.moveDirection * ballInstance.ballSpeed;
+        //     ballInstance.ballSpeed++;
+
+        // }
     }
 
     /// <summary>
@@ -41,8 +43,23 @@ public class BallController : MonoBehaviour
         Debug.Log(collision.transform.name);
         string collisionName = collision.transform.name;
 
-        ballInstance.moveDirection = Vector2.Reflect(ballInstance.currentVelocity, collision.GetContact(0).normal);
-        rigidbody2D.velocity = ballInstance.moveDirection;
+        // ballInstance.moveDirection = Vector2.Reflect(ballInstance.currentVelocity, collision.GetContact(0).normal);
+        // rigidbody2D.velocity = ballInstance.moveDirection;
+        //calculate the direction in wich the ball should move after the collision
+        Vector2 collisionNormal = collision.GetContact(0).normal;
+        Vector2 newDirection = Vector2.zero;
+        if (Vector2.Dot(ballInstance.currentVelocity, collisionNormal) < 0)
+        {
+            newDirection = Vector2.Reflect(ballInstance.currentVelocity, collisionNormal).normalized;
+        }
+        else
+        {
+            newDirection = ballInstance.currentVelocity.normalized;
+        }
+
+        //Adjust the ball velocity directly after the collision
+        rigidbody2D.velocity = newDirection * ballInstance.ballSpeed;
+        Debug.Log(rigidbody2D.velocity);
         if (collisionName.Equals("LowerLimit"))
         {
             //die(ballView.ballSprite);

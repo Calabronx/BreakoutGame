@@ -300,3 +300,5 @@ Assets/TextMesh Pro.meta
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/TagManager.asset
 .gitignore
+BuildGame/Breakout_Data/resources.assets
+BuildGame/Breakout_Data/resources.assets.resS
