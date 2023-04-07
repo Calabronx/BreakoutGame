@@ -9,6 +9,7 @@ public class GameView : MonoBehaviour
     public TMP_Text lifesText;
     public TMP_Text loseMessage;
     public TMP_Text winMessage;
+    
 
     public enum GameMessagesStatus {
         // set messages for game

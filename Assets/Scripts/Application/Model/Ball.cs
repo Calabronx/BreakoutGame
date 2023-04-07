@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private int lifes = 3;
+    private int lifes = 10;
     public float ballSpeed = 20f;
     public const float MIN_SPEED = 20f;
     public Vector2 currentVelocity;

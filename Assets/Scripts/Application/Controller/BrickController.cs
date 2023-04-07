@@ -15,7 +15,7 @@ public class BrickController : MonoBehaviour
         Debug.Log(collisionName);
         if (collisionName.Contains("BallSprite"))
         {
-            brick.health--;
+            brick.health--; // deberia setear el componente del brick para darle un efecto de daño
             if(brick.health <= 0) {
                 Debug.Log("destroy brick");
                 brick.isDead = true;
