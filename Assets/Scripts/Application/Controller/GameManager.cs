@@ -39,12 +39,21 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
+
+        if (!ballView.ballSprite.activeSelf)
+        {
+            gameView.continueMessageView.text = gameView.continueGameMsg;
+        }
+        else
+        {
+            gameView.continueMessageView.text = "";
+        }
+
         if (Input.GetMouseButtonDown(0) && isRespawning)
         {
-            if (!ballView.ballSprite.activeSelf)
-            {
-                respawnBall();
-            }
+
+            respawnBall();
+
         }
         Debug.Log("is respawning " + isRespawning);
     }
