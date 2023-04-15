@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] BrickGeneratorController gameBricks;
     [SerializeField] BrickController bricksController;
     [SerializeField] RestartGame restartGame;
+    [SerializeField] GameOverScreen gameOverScreen;
+    [SerializeField] MainMenu menu;
 
     private bool isRespawning = false;
     public bool winGame = false;
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        // menu.Setup();
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
         
     }
@@ -34,6 +36,9 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        // if(!menu.isActiveAndEnabled) {
+        //     ballSprite.SetActive(true);
+        // }
         Debug.Log("bricks counter: " + gameBricks.brickCounter);
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
 
@@ -55,29 +60,30 @@ public class GameManager : MonoBehaviour
 
             }
         }
-        if (winGame || looseGame)
-        {
-            restart();
-        }
+        // if (winGame || looseGame)
+        // {
+        //     restart();
+        // }
         if (gameBricks.brickCounter <= 0)
         {
             OnWin();
         }
     }
 
-    private void restart()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("pressed");
-            StartCoroutine(ReloadScene());
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Quit game..");
-            Application.Quit();
-        }
-    }
+    // private void restart()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Return))
+    //     {
+    //         Debug.Log("pressed");
+    //         StartCoroutine(ReloadScene());
+    //         gameOverScreen.Desactivate();
+    //     }
+    //     else if (Input.GetKeyDown(KeyCode.Escape))
+    //     {
+    //         Debug.Log("Quit game..");
+    //         Application.Quit();
+    //     }
+    // }
 
     public void OnBallDeath()
     {
@@ -143,6 +149,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Sorry, you lose!");
             gameView.loseMessage.text = "GAME OVER - Reiniciar ? Presione la tecla Enter para continuar o Espacio para salir";
+            gameOverScreen.Setup();
             // gameView.restartGameQuestion.text = "Presione la tecla Enter para continuar o Espacio para salir";
             Destroy(ballView.ballSprite);
             looseGame = true;
