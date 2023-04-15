@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,51 +11,68 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameView gameView;
     [SerializeField] BallView ballView;
     [SerializeField] Ball ballInstance;
-    [SerializeField] GameObject ballSprite; // should be the gameEmpty,not sprite to be destroyed
+    [SerializeField] GameObject ballSprite;
+    [SerializeField] BrickGeneratorController gameBricks;
+    [SerializeField] RestartGame restartGame;
 
     private bool isRespawning = false;
+    public bool winGame = false;
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    /// <summary>
-    /// Awake is called when the script instance is being loaded.
-    /// </summary>
+    public bool looseGame = false;
+
     private void Awake()
     {
         //lives = ballInstance.lifes;
         //lifesText.text = lifesScore + " " + ballInstance.lifes + " HP";
         // newBall = ballView.ballSprite;
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
+        // Debug.Log("bricks counter: " + gameBricks.brickCounter );
     }
     private void Start()
     {
         //lifesText.text = lifesScore;
+        Debug.Log("bricks counter: " + gameBricks.BricksCounter);
     }
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
     private void Update()
     {
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
 
-        if (!ballView.ballSprite.activeSelf)
+        if (ballView.ballSprite != null)
         {
-            gameView.continueMessageView.text = gameView.continueGameMsg;
+            if (!ballView.ballSprite.activeSelf)
+            {
+                gameView.continueMessageView.text = gameView.continueGameMsg;
+            }
+            else
+            {
+                gameView.continueMessageView.text = "";
+            }
+
+            if (Input.GetMouseButtonDown(0) && isRespawning)
+            {
+
+                respawnBall();
+
+            }
         }
-        else
+        if (winGame || looseGame)
         {
-            gameView.continueMessageView.text = "";
+            restart();
         }
+    }
 
-        if (Input.GetMouseButtonDown(0) && isRespawning)
+    private void restart()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-
-            respawnBall();
-
+            Debug.Log("pressed");
+            StartCoroutine(ReloadScene());
         }
-        Debug.Log("is respawning " + isRespawning);
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Quit game..");
+            Application.Quit();
+        }
     }
 
     public void OnBallDeath()
@@ -71,11 +88,18 @@ public class GameManager : MonoBehaviour
         else
         {
             EndGame(false);
+            looseGame = true;
+        }
+
+        if (gameBricks.BricksCounter <= 0)
+        {
+            OnWin();
         }
     }
 
     public void OnWin()
     {
+        winGame = true;
         EndGame(true);
     }
 
@@ -85,22 +109,15 @@ public class GameManager : MonoBehaviour
         isRespawning = true;
     }
 
-    // private IEnumerator resetBallPosition(GameObject ballReference)
-    // {
-    //     // ballView.ballSprite.gameObject.transform.position = new Vector2(0.05f, -2.2f);
-    //     Debug.Log("waiting...");
-    //     ballView.ballSprite.gameObject.SetActive(false);
-    //     yield return new WaitForSeconds(3f);
+    private IEnumerator ReloadScene()
+    {
+        Debug.Log("restarting");
+        yield return new WaitForSeconds(2f);
 
-    //     Debug.Log("run");
-    //     ballView.ballSprite.gameObject.SetActive(true);
-    //     ballView.ballSprite.gameObject.transform.position = new Vector2(0.05f, -2.2f);
-    //     Rigidbody2D rigidbody2D = ballView.ballSprite.GetComponent<Rigidbody2D>();
-    //     rigidbody2D.velocity = Vector2.down * ballInstance.ballSpeed;
-
-    //     // GameObject respawnBall = Instantiate(ballReference, new Vector2(0.05f, -2.2f), Quaternion.identity);
-    //     // Destroy(ballView.ballSprite);
-    // }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        winGame = false;
+        looseGame = false;
+    }
     private void respawnBall()
     {
         Debug.Log("reset ball");
@@ -117,14 +134,31 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Congratulations, you win!");
             gameView.winMessage.text = "Congratulations, you win!";
+            winGame = true;
         }
         else
         {
             Debug.Log("Sorry, you lose!");
-            gameView.loseMessage.text = "Sorry, you lose!";
+            gameView.loseMessage.text = "GAME OVER - Restart ? Presione la tecla Enter para continuar o Espacio para salir";
+            // gameView.restartGameQuestion.text = "Presione la tecla Enter para continuar o Espacio para salir";
             Destroy(ballView.ballSprite);
+            looseGame = true;
+            // Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("pressed");
+            StartCoroutine(ReloadScene());
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Quit game..");
             Application.Quit();
         }
+
+
+        // StartCoroutine(ReloadScene());
         //reload scene or end game with app.exit(0)
     }
 

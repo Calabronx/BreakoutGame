@@ -14,6 +14,11 @@ public class BrickGeneratorController : MonoBehaviour
     private int brickCounter = 0;
     private Color[] colors = {Color.red, Color.red,Color.yellow,Color.yellow,Color.green,Color.green,Color.blue,Color.blue,Color.magenta,Color.magenta,Color.black,Color.black};
     // Start is called before the first frame update
+
+    public int BricksCounter {
+        get {return brickCounter;}
+    }
+
     void Start()
     {
         for (int row = 0; row < rows; row++)
@@ -27,5 +32,6 @@ public class BrickGeneratorController : MonoBehaviour
                 brickCounter++; // set the color of the brick view
             }
         }
+        Debug.Log("bricks count " + brickCounter);
     }
 }
