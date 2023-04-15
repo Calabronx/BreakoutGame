@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Ball ballInstance;
     [SerializeField] GameObject ballSprite;
     [SerializeField] BrickGeneratorController gameBricks;
+    [SerializeField] BrickController bricksController;
     [SerializeField] RestartGame restartGame;
 
     private bool isRespawning = false;
@@ -22,19 +23,18 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //lives = ballInstance.lifes;
-        //lifesText.text = lifesScore + " " + ballInstance.lifes + " HP";
-        // newBall = ballView.ballSprite;
+        
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
-        // Debug.Log("bricks counter: " + gameBricks.brickCounter );
+        
     }
     private void Start()
     {
         //lifesText.text = lifesScore;
-        Debug.Log("bricks counter: " + gameBricks.BricksCounter);
+        // Debug.Log("bricks counter: " + gameBricks.BricksCounter);
     }
     private void Update()
     {
+        Debug.Log("bricks counter: " + gameBricks.brickCounter);
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
 
         if (ballView.ballSprite != null)
@@ -58,6 +58,10 @@ public class GameManager : MonoBehaviour
         if (winGame || looseGame)
         {
             restart();
+        }
+        if (gameBricks.brickCounter <= 0)
+        {
+            OnWin();
         }
     }
 
@@ -91,10 +95,10 @@ public class GameManager : MonoBehaviour
             looseGame = true;
         }
 
-        if (gameBricks.BricksCounter <= 0)
-        {
-            OnWin();
-        }
+        // if (gameBricks.brickCounter <= 0)
+        // {
+        //     OnWin();
+        // }
     }
 
     public void OnWin()
@@ -113,7 +117,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("restarting");
         yield return new WaitForSeconds(2f);
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         winGame = false;
         looseGame = false;
@@ -133,34 +136,19 @@ public class GameManager : MonoBehaviour
         if (win)
         {
             Debug.Log("Congratulations, you win!");
-            gameView.winMessage.text = "Congratulations, you win!";
+            gameView.winMessage.text = "Felicidades, ganaste! Para volver a jugar presione la tecla Enter para continuar o Espacio para salir";
             winGame = true;
         }
         else
         {
             Debug.Log("Sorry, you lose!");
-            gameView.loseMessage.text = "GAME OVER - Restart ? Presione la tecla Enter para continuar o Espacio para salir";
+            gameView.loseMessage.text = "GAME OVER - Reiniciar ? Presione la tecla Enter para continuar o Espacio para salir";
             // gameView.restartGameQuestion.text = "Presione la tecla Enter para continuar o Espacio para salir";
             Destroy(ballView.ballSprite);
             looseGame = true;
             // Application.Quit();
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("pressed");
-            StartCoroutine(ReloadScene());
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Quit game..");
-            Application.Quit();
-        }
-
-
-        // StartCoroutine(ReloadScene());
-        //reload scene or end game with app.exit(0)
     }
-
 
 }

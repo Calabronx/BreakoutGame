@@ -6,6 +6,8 @@ public class BrickController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Brick brick;
+    [SerializeField] BrickGeneratorController gameBricks;
+
     //[SerializeField] GameObject brick;
 
      private void OnCollisionEnter2D(Collision2D collision)
@@ -20,6 +22,7 @@ public class BrickController : MonoBehaviour
                 Debug.Log("destroy brick");
                 brick.isDead = true;
                 Destroy(brick.brickSprite);
+                gameBricks.brickCounter--;
             }
         }
     }

@@ -1158,6 +1158,7 @@ MonoBehaviour:
   ballInstance: {fileID: 1659359556}
   ballSprite: {fileID: 1781192504}
   gameBricks: {fileID: 124589146}
+  bricksController: {fileID: 2032881666}
   restartGame: {fileID: 649659400}
   winGame: 0
   looseGame: 0
@@ -2260,6 +2261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brick: {fileID: 171476480}
+  gameBricks: {fileID: 124589146}
+  bricksCounter: 0
 --- !u!1 &2073499180
 GameObject:
   m_ObjectHideFlags: 0

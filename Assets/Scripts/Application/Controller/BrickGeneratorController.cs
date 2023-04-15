@@ -11,7 +11,7 @@ public class BrickGeneratorController : MonoBehaviour
     private float xOffset = 6f;
     private float yOffset = 2f;
     private int rotation = 90;
-    private int brickCounter = 0;
+    public int brickCounter = 0;
     private Color[] colors = {Color.red, Color.red,Color.yellow,Color.yellow,Color.green,Color.green,Color.blue,Color.blue,Color.magenta,Color.magenta,Color.black,Color.black};
     // Start is called before the first frame update
 
