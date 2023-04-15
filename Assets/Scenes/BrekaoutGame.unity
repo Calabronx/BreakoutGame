@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brickViewPrefab: {fileID: 2032881665}
   brickInstance: {fileID: 2032881664}
+  brickCounter: 0
 --- !u!1 &131565838
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +645,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9056604, g: 0.37254903, b: 0.07262372, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2262,7 +2263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brick: {fileID: 171476480}
   gameBricks: {fileID: 124589146}
-  bricksCounter: 0
 --- !u!1 &2073499180
 GameObject:
   m_ObjectHideFlags: 0
