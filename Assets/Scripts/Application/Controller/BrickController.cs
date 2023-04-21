@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class BrickController : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] Brick brick;
     [SerializeField] BrickGeneratorController gameBricks;
-
-    //[SerializeField] GameObject brick;
+    [SerializeField] HighScore highScore;
 
      private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,6 +21,8 @@ public class BrickController : MonoBehaviour
                 brick.isDead = true;
                 Destroy(brick.brickSprite);
                 gameBricks.brickCounter--;
+                highScore.bricksDestroyedCounter();
+                highScore.playerPointsCounter();
             }
         }
     }

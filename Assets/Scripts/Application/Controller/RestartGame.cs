@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class RestartGame : MonoBehaviour
 {
 
-
+    [SerializeField] GameView gameView;
+    [SerializeField] HighScore finalHighScore;
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>

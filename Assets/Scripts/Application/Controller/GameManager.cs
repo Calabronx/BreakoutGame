@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] RestartGame restartGame;
     [SerializeField] GameOverScreen gameOverScreen;
     [SerializeField] MainMenu menu;
+    [SerializeField] HighScore finalHighScore;
 
     private bool isRespawning = false;
     public bool winGame = false;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         // menu.Setup();
         gameView.lifesText.text = gameView.lifesScore + " " + ballInstance.Lifes + " HP";
-        
+
     }
     private void Start()
     {
@@ -68,6 +69,11 @@ public class GameManager : MonoBehaviour
         {
             OnWin();
         }
+        // Debug.Log("Total points: " + finalHighScore.playerPoints);
+        // Debug.Log("Total bricks destroyed: " + finalHighScore.destroyedBricksCount);
+        gameView.totalPoints.text = gameView.totalPointsMsg + finalHighScore.playerPoints;
+        gameView.totalBricksDestroyed.text = gameView.totalBricksDestroyedMsg + finalHighScore.destroyedBricksCount;
+        
     }
 
     // private void restart()
@@ -149,6 +155,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Sorry, you lose!");
             gameView.loseMessage.text = "GAME OVER - Reiniciar ? Presione la tecla Enter para continuar o Espacio para salir";
+            // gameView.totalPoints.text = "Total points: " + finalHighScore.playerPoints;
+            // gameView.totalBricksDestroyed.text = "Total bricks destroyed: " + finalHighScore.destroyedBricksCount;
             gameOverScreen.Setup();
             // gameView.restartGameQuestion.text = "Presione la tecla Enter para continuar o Espacio para salir";
             Destroy(ballView.ballSprite);
