@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameOverScreen gameOverScreen;
     [SerializeField] MainMenu menu;
     [SerializeField] HighScore finalHighScore;
+    [SerializeField] GameObject game;
 
     private bool isRespawning = false;
     public bool winGame = false;
@@ -150,6 +151,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Congratulations, you win!");
             gameView.winMessage.text = "Felicidades, ganaste! Para volver a jugar presione la tecla Enter para continuar o Espacio para salir";
             winGame = true;
+            
         }
         else
         {
@@ -161,6 +163,7 @@ public class GameManager : MonoBehaviour
             // gameView.restartGameQuestion.text = "Presione la tecla Enter para continuar o Espacio para salir";
             Destroy(ballView.ballSprite);
             looseGame = true;
+            game.SetActive(false);
             // Application.Quit();
         }
 

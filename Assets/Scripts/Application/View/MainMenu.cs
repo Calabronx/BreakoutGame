@@ -6,24 +6,34 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject ball;
- public void Setup() {
-    gameObject.SetActive(true);
-   }
+    [SerializeField] GameObject game;
+    [SerializeField] GameObject brickInitializer;
+    [SerializeField] GameObject brick;
+    public void Setup()
+    {
+        gameObject.SetActive(true);
+    }
 
-   public void Desactivate() {
-      gameObject.SetActive(false);
-   }
+    public void Desactivate()
+    {
+        gameObject.SetActive(false);
+    }
 
-   public void start() {
-    //   gameObject.SetActive(false);
-      ball.SetActive(true);  
-      gameObject.SetActive(false);
-    //   SceneManager.LoadScene("BrekaoutGame");
-   }
+    public void start()
+    {
+        //   gameObject.SetActive(false);
+        game.SetActive(true);
+        ball.SetActive(true);
+        brick.SetActive(true);
+        brickInitializer.SetActive(true);
+        gameObject.SetActive(false);
+        //   SceneManager.LoadScene("BrekaoutGame");
+    }
 
-   public void ExitButton() {
-      // SceneManager.LoadScene("MainMenu");
-      Application.Quit(0);
-   }
+    public void ExitButton()
+    {
+        // SceneManager.LoadScene("MainMenu");
+        Application.Quit(0);
+    }
 
 }
