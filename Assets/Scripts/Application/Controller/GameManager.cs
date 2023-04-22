@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] MainMenu menu;
     [SerializeField] HighScore finalHighScore;
     [SerializeField] GameObject game;
+    [SerializeField] WinScreen winScreen;
 
     private bool isRespawning = false;
     public bool winGame = false;
@@ -149,9 +150,11 @@ public class GameManager : MonoBehaviour
         if (win)
         {
             Debug.Log("Congratulations, you win!");
-            gameView.winMessage.text = "Felicidades, ganaste! Para volver a jugar presione la tecla Enter para continuar o Espacio para salir";
+            // gameView.winMessage.text = "Felicidades, ganaste! Para volver a jugar presione la tecla Enter para continuar o Espacio para salir";
+
             winGame = true;
-            
+            game.SetActive(false);
+            winScreen.Setup();
         }
         else
         {
